@@ -41,3 +41,10 @@
   color: var(--text-secondary);
   font-size: 1.3rem;
 }
+
+@media screen and (max-width: 768px) {
+  .list .item {
+    padding: 2rem;
+    gap: 1.5rem;
+  }
+}

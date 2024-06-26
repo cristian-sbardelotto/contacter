@@ -24,3 +24,9 @@ main {
   height: 100vh;
   margin-inline: auto;
 }
+
+@media screen and (max-width: 768px) {
+  main {
+    padding: 4rem 2rem;
+  }
+}
