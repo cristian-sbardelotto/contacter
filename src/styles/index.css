@@ -1,0 +1,28 @@
+@import url(./_variables.css);
+
+:root {
+  font-size: 62.5%;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  color: var(--text);
+  background-color: var(--background);
+  font-size: 1.6rem;
+  font-family: Poppins, sans-serif;
+}
+
+main {
+  padding: 3.2rem 4rem;
+  max-width: 800px;
+  height: 100vh;
+  margin-inline: auto;
+}
+
+h1 {
+  font-weight: 700;
+  font-size: 3rem;
+}
