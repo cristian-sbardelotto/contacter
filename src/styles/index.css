@@ -1,4 +1,5 @@
 @import url(./_variables.css);
+@import url(./_list.css);
 
 :root {
   font-size: 62.5%;
@@ -12,11 +13,11 @@ body {
   color: var(--text);
   background-color: var(--background);
   font-size: 1.6rem;
-  font-family: Poppins, sans-serif;
+  font-family: Rubik, sans-serif;
 }
 
 main {
-  padding: 3.2rem 4rem;
+  padding: 5rem 4rem;
   max-width: 800px;
   height: 100vh;
   margin-inline: auto;
@@ -25,4 +26,6 @@ main {
 h1 {
   font-weight: 700;
   font-size: 3rem;
+
+  margin-bottom: 4rem;
 }
