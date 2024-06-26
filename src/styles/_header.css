@@ -1,0 +1,30 @@
+header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  margin-bottom: 4rem;
+}
+
+header button {
+  background-color: transparent;
+  border: none;
+  border-radius: 50%;
+  padding: 1rem;
+  font-size: 3rem;
+  color: var(--text-secondary);
+}
+
+header button:hover {
+  background-color: #3331;
+  cursor: pointer;
+}
+
+header button:active {
+  background-color: #3332;
+}
+
+header h1 {
+  font-weight: 700;
+  font-size: 3rem;
+}

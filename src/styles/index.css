@@ -1,5 +1,7 @@
 @import url(./_variables.css);
 @import url(./_list.css);
+@import url(./_modal.css);
+@import url(./_header.css);
 
 :root {
   font-size: 62.5%;
@@ -21,11 +23,4 @@ main {
   max-width: 800px;
   height: 100vh;
   margin-inline: auto;
-}
-
-h1 {
-  font-weight: 700;
-  font-size: 3rem;
-
-  margin-bottom: 4rem;
 }

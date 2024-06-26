@@ -19,7 +19,13 @@
 
 <body>
   <main>
-    <h1>Contacter</h1>
+    <header>
+      <h1>Contacter</h1>
+
+      <button popovertarget="modal">
+        <i class="ph ph-plus"></i>
+      </button>
+    </header>
 
     <ul class="list">
       <li class="item">
@@ -52,9 +58,16 @@
         </div>
       </li>
     </ul>
+
+    <div popover id='modal'>
+      <p>Meu modal</p>
+    </div>
   </main>
 
+
   <script src="./src/js/index.js"></script>
+  <!-- Phosphor Icons -->
+  <script src="https://unpkg.com/@phosphor-icons/web"></script>
 </body>
 
 </html>
