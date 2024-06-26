@@ -22,7 +22,7 @@
     <header>
       <h1>Contacter</h1>
 
-      <button popovertarget="modal">
+      <button popovertarget="modal" popovertargetaction="show">
         <i class="ph ph-plus"></i>
       </button>
     </header>
@@ -60,7 +60,23 @@
     </ul>
 
     <div popover id='modal'>
-      <p>Meu modal</p>
+      <h2>New contact</h2>
+
+      <form action="">
+        <div class="inputs">
+          <div class="input-group">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" placeholder="Cristian Sbardelotto">
+          </div>
+
+          <div class="input-group">
+            <label for="phone">Phone:</label>
+            <input type="text" id="phone" name="phone" placeholder="+55 (51) 999999999">
+          </div>
+        </div>
+
+        <button type="submit">Create</button>
+      </form>
     </div>
   </main>
 

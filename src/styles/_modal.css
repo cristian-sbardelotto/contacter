@@ -3,9 +3,64 @@
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  border-radius: 1rem;
-  box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px,
-    rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+  border-radius: 10px;
+  box-shadow: rgba(50, 50, 93, 0.25) 0 13px 27px -5px,
+    rgba(0, 0, 0, 0.3) 0 8px 16px -8px;
+}
+
+#modal h2 {
+  font-weight: 700;
+  font-size: 2rem;
+}
+
+#modal form {
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+  align-items: end;
+}
+
+#modal form .inputs {
+  margin-top: 2.5rem;
+
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+#modal form .inputs .input-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+#modal form .inputs .input-group label {
+  font-size: 1.6rem;
+  color: var(--text-secondary);
+}
+
+#modal form .inputs .input-group input {
+  border: 1px solid rgba(107, 107, 107, 0.067);
+  border-radius: 6px;
+  padding: 1rem;
+  font-size: 1.6rem;
+  background-color: #f0f0f0;
+
+  outline: none;
+}
+
+#modal form button {
+  border: none;
+  border-radius: 7px;
+  padding: 1rem;
+  color: #3da042;
+  background-color: #83be8657;
+  font-size: 1.5rem;
+}
+
+#modal form button:hover {
+  cursor: pointer;
+  filter: brightness(0.95);
 }
 
 ::backdrop {
