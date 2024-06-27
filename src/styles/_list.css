@@ -28,9 +28,9 @@
 
 .list .item .contact-info {
   display: flex;
-  justify-content: space-between;
   flex-direction: column;
-  margin-block: 0.5rem;
+  justify-content: center;
+  gap: 1rem;
 }
 
 .list .item .contact-info h4 {
@@ -46,5 +46,25 @@
   .list .item {
     padding: 2rem;
     gap: 1.5rem;
+  }
+
+  .list .item .contact-info h4 {
+    max-width: 175px;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+  }
+}
+
+@media screen and (max-width: 524px) {
+  .list .item {
+    padding: 1.25rem;
+    gap: 1rem;
+  }
+
+  .list .item .profile-picture {
+    height: 35px;
+    width: 35px;
+    font-size: 1.2rem;
   }
 }
