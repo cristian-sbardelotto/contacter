@@ -1,5 +1,7 @@
 const submitButton = document.querySelector('button[type="submit"]');
 
 window.addEventListener('keydown', event => {
-  if (event.key === 'Enter') submitButton.click();
+  const form = document.querySelector('form');
+
+  if (event.key === 'Enter' && form) submitButton.click();
 });

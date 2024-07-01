@@ -1,4 +1,5 @@
 import { Agenda } from './agenda.js';
+import { closeModal } from './modal.js';
 import './keyboard-shortcuts.js';
 
 const agenda = new Agenda();
@@ -12,6 +13,11 @@ function handleSubmit(event) {
   const formData = new FormData(form);
   const data = Object.fromEntries(formData.entries());
 
-  agenda.addContact(data);
-  console.log(agenda);
+  if (true) {
+    // TODO: success
+    agenda.addContact(data);
+    console.log(agenda);
+    form.reset();
+    closeModal();
+  }
 }
