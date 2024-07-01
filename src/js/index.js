@@ -1,4 +1,5 @@
 import { Agenda } from './agenda.js';
+import './keyboard-shortcuts.js';
 
 const agenda = new Agenda();
 
