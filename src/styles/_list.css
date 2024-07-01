@@ -26,6 +26,24 @@
   user-select: none;
 }
 
+.list .item .profile-picture:hover {
+  border-color: transparent;
+  background: rgba(255, 0, 0, 0.185);
+  cursor: pointer;
+}
+
+.list .item .profile-picture:hover i {
+  display: initial;
+}
+
+.list .item .profile-picture:hover span {
+  display: none;
+}
+
+.list .item .profile-picture i {
+  display: none;
+}
+
 .list .item .contact-info {
   display: flex;
   flex-direction: column;

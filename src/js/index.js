@@ -21,3 +21,5 @@ function handleSubmit(event) {
     closeModal();
   }
 }
+
+// DELETE CONTACT
