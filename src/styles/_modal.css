@@ -63,6 +63,12 @@
   filter: brightness(0.95);
 }
 
+#modal form .submit-error {
+  color: var(--error);
+  text-align: end;
+  max-width: 200px;
+}
+
 ::backdrop {
   background-color: var(--backdrop);
 }

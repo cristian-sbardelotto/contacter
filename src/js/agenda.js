@@ -1,5 +1,6 @@
 import { handleDeleteContact } from './index.js';
 import { addContactDeleteListeners } from './utils.js';
+import { sendSubmitError } from './modal.js';
 
 export class Agenda {
   /**
@@ -11,7 +12,14 @@ export class Agenda {
 
   addContact({ name, phone }) {
     // TODO: validation on name and phone
-    // TODO: name can't be repeated
+    const nameAlreadyExists = this.contacts.some(
+      contact => contact.name === name
+    );
+
+    if (nameAlreadyExists) {
+      throw new Error('Name was already used!');
+    }
+
     const id = self.crypto.randomUUID();
 
     this.contacts.push({ name, phone, id });

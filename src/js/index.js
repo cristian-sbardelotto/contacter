@@ -1,6 +1,5 @@
 import { Agenda } from './agenda.js';
-import { closeModal } from './modal.js';
-import { addContactDeleteListeners } from './utils.js';
+import { closeModal, sendSubmitError } from './modal.js';
 import './keyboard-shortcuts.js';
 
 const agenda = new Agenda();
@@ -16,10 +15,15 @@ function handleSubmit(event) {
 
   if (true) {
     // TODO: success
-    agenda.addContact(data);
-    console.log(agenda);
-    form.reset();
-    closeModal();
+    try {
+      agenda.addContact(data);
+
+      console.log(agenda);
+      form.reset();
+      closeModal();
+    } catch (error) {
+      sendSubmitError(error);
+    }
   }
 }
 
