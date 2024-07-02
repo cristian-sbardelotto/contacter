@@ -1,3 +1,6 @@
+import { handleDeleteContact } from './index.js';
+import { addContactDeleteListeners } from './utils.js';
+
 export class Agenda {
   /**
    * @param {Array} [initialValue] - Initial value of the agenda.
@@ -25,6 +28,14 @@ export class Agenda {
     this.updateDOM();
   }
 
+  getContactByName(name) {
+    const contact = this.contacts.find(item => item.name === name);
+
+    if (contact.length <= 0) return; // TODO: throw error
+
+    return contact;
+  }
+
   updateDOM() {
     const list = document.querySelector('ul.list');
     list.innerHTML = '';
@@ -47,13 +58,6 @@ export class Agenda {
       `;
     });
 
-    const profilePictures = document.querySelectorAll('.profile-picture');
-    profilePictures.forEach(profilePicture =>
-      profilePicture.addEventListener('click', event => {
-        const contactInfoDiv = event.target.nextElementSibling;
-        const name = contactInfoDiv.querySelector('h4').textContent;
-        console.log(name);
-      })
-    );
+    addContactDeleteListeners(handleDeleteContact);
   }
 }

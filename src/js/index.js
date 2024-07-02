@@ -1,5 +1,6 @@
 import { Agenda } from './agenda.js';
 import { closeModal } from './modal.js';
+import { addContactDeleteListeners } from './utils.js';
 import './keyboard-shortcuts.js';
 
 const agenda = new Agenda();
@@ -22,4 +23,11 @@ function handleSubmit(event) {
   }
 }
 
-// DELETE CONTACT
+export function handleDeleteContact(event) {
+  const contactInfoDiv = event.target.nextElementSibling;
+  const name = contactInfoDiv.querySelector('h4').textContent;
+
+  const contact = agenda.getContactByName(name);
+  agenda.removeContact(contact.id);
+  console.log(agenda);
+}
